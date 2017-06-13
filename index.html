@@ -49,7 +49,7 @@ And if you have any dietary requirements please get in contact with one of the <
 <h5><b>Christopher Brown</b> - <i>TBD</i></h5>
 <h5><b>Andrew Gozillon</b> - <i>Programmable address spaces</i></h5> 
 <h5><b>Conor McBride</b> - <i>TBD</i></h5>
-<h5><b>Michel Steuwer</b> - <i>TBD</i></h5>
+<h5><b>Michel Steuwer</b> - <i>Towards Composable GPU Programming: Programming GPUs with Eager Actions and Lazy Views</i></h5>
 <h5><b>Rob Stewart</b> - <i>TBD</i></h5>
 <h5><b>Thomas Wright</b> - <i>Process algebra meets cellular biology</i></h5> 
 
@@ -79,7 +79,7 @@ And if you have any dietary requirements please get in contact with one of the <
 <!--<td class="col-md-1"> 12:00 </td> !-->
 <td class="col-md-3"> <div><b>Thomas Wright</b></div><div><i>Process algebra meets cellular biology</i></div></td>
 <td class="col-md-8" style="font-size:13px">Cells and concurrent programs are not so different - both have to communicate, process information, and respond to their environment. However, biological systems consist of many more agents than even the largest computer networks, and are highly heterogeneous with no apparent overall design, presenting formidable challenges in modelling and understanding their behaviour. Worse still, biologists don't have access to the high level programming languages we rely on in designing concurrent programs, instead working at the level of machine code (DNA) and circuit diagrams (protein signalling networks). This has inspired many to investigate ways to apply ideas from concurrent programming and process algebra to build higher level languages for modelling biochemical systems.
-
+</br>
 We propose a new high level concurrent programming language for modelling biological systems. We build upon the π-calculus, to model cells as communicating agents, and show how concepts such as parallel composition, name binding, and synchronisation correspond to concepts in biology. We apply our language to V. A. Kuznetsov's classic model of immune response to tumour growth, and show how we able capture complex features including by nonlinear interaction dynamics, n-party interactions, and dynamic binding of agents to form new agents.</td>
 </tr>
 <tr>
@@ -99,8 +99,29 @@ We propose a new high level concurrent programming language for modelling biolog
 </tr>
 <tr>
 <!--<td class="col-md-1"> 12:00 </td> !-->
-<td class="col-md-3"> <div><b>Michel Steuwer</b></div><div><i></i></div></td>
-<td class="col-md-8"> </td>
+<td class="col-md-3"> <div><b>Michel Steuwer</b></div><div><i>Towards Composable GPU Programming: Programming GPUs with Eager Actions and Lazy Views</i></div></td>
+<td class="col-md-8" style="font-size:13px"> In this work, we advocate a composable approach to programming  systems with Graphics Processing Units (GPU): programs are developed as compositions of generic, reusable patterns. Current GPU programming approaches either rely on low-level, monolithic code without patterns (CUDA and OpenCL), which achieves
+high performance at the cost of cumbersome and error-prone programming, or
+they improve the programmability by using pattern-based abstractions (e.g.,
+Thrust) but pay a performance penalty due to inefficient implementations of
+pattern composition.
+</br>
+We develop an API for GPUs based programming on C++ with STL-style patterns
+and its compiler-based implementation. Our API gives the application developers
+the native C++ means (views and actions) to specify precisely which pattern
+compositions should be automatically fused during code generation into a single
+efficient GPU kernel, thereby ensuring a high target performance. We implement
+our approach by extending the range-v3 library which is currently being developed
+for the forthcoming C++ standards. The composable programming in our approach
+is done exclusively in the standard C++14, with STL algorithms used as patterns
+which we re-implemented in parallel for GPU. Our compiler implementation is
+based on the LLVM and Clang frameworks, and we use advanced multi-stage
+programming techniques for aggressive runtime optimizations.
+</br>
+We experimentally evaluate our approach using a set of benchmark applications and
+a real-world case study from the area of image processing. Our codes achieve
+performance competitive with CUDA monolithic implementations, and we
+outperform pattern-based codes written using Nvidia’s Thrust.</td>
 </tr>
 </tbody>
 </table>
