@@ -46,7 +46,7 @@ And if you have any dietary requirements please get in contact with one of the <
 <h2 class="text-center"> Speakers </h2>
 
 <h5><b>Nick Brown</b> - <i>An implementation of Python for the micro-core Epiphany co-processor</i></h5> 
-<h5><b>Christopher Brown</b> - <i>TBD</i></h5>
+<h5><b>Christopher Brown</b> - <i>ParaFormance: Democratizing Parallel Software Development</i></h5>
 <h5><b>Andrew Gozillon</b> - <i>Programmable address spaces</i></h5> 
 <h5><b>Conor McBride</b> - <i>TBD</i></h5>
 <h5><b>Michel Steuwer</b> - <i>Towards Composable GPU Programming: Programming GPUs with Eager Actions and Lazy Views</i></h5>
@@ -80,6 +80,7 @@ And if you have any dietary requirements please get in contact with one of the <
 <td class="col-md-3"> <div><b>Thomas Wright</b></div><div><b>University of Edinburgh</b></div><div><i>Process algebra meets cellular biology</i></div></td>
 <td class="col-md-8" style="font-size:13px">Cells and concurrent programs are not so different - both have to communicate, process information, and respond to their environment. However, biological systems consist of many more agents than even the largest computer networks, and are highly heterogeneous with no apparent overall design, presenting formidable challenges in modelling and understanding their behaviour. Worse still, biologists don't have access to the high level programming languages we rely on in designing concurrent programs, instead working at the level of machine code (DNA) and circuit diagrams (protein signalling networks). This has inspired many to investigate ways to apply ideas from concurrent programming and process algebra to build higher level languages for modelling biochemical systems.
 </br>
+</br>
 We propose a new high level concurrent programming language for modelling biological systems. We build upon the π-calculus, to model cells as communicating agents, and show how concepts such as parallel composition, name binding, and synchronisation correspond to concepts in biology. We apply our language to V. A. Kuznetsov's classic model of immune response to tumour growth, and show how we able capture complex features including by nonlinear interaction dynamics, n-party interactions, and dynamic binding of agents to form new agents.</td>
 </tr>
 <tr>
@@ -89,8 +90,18 @@ We propose a new high level concurrent programming language for modelling biolog
 </tr>
 <tr>
 <!--<td class="col-md-1"> 12:00 </td> !-->
-<td class="col-md-3"> <div><b>Christopher Brown</b></div><div><b>University of St Andrews</b></div><div><i></i></div></td>
-<td class="col-md-8"> </td>
+<td class="col-md-3"> <div><b>Christopher Brown</b></div><div><b>University of St Andrews</b></div><div><i>ParaFormance: Democratizing Parallel Software Development</i></div></td>
+<td class="col-md-8" style="font-size:13px"> 
+Emerging multicore and manycore architectures offer major advantages in terms of performance and low energy usage. We are already seeing designs for 100+ cores CPUs and 1000+ cores GPUs, offering significant potential for parallelism. However, programming models are lagging behind. Exploiting the potential of new parallel systems, even using higher-level programming models, is highly challenging.
+</br>
+</br>
+Fundamentally:
+"Parallelism is too hard for programmers today"
+</br>
+Bjarne Stroustrup, Inventor of C++
+</br>
+</br>
+ParaFormance is a novel software toolset for C and C++ that allows software developers to optimise systems for performance and energy consumption by exploiting parallelism quickly and easy. Our ParaFormance tool discovers the potential areas in the application for parallelism, refactors it to introduce the parallel business logic automatically and checks it for thread-safety and runtime bugs. Our case studies have shown 2.5 million lines of code analysed and refactored using ParaFormance, that’s 1 month of manual effort reduced to around 5 minutes. In this talk I will introduce the ParaFormance toolset and give a demonstration of it on a realistic use-case.</td>
 </tr>
 <tr>
 <!--<td class="col-md-1"> 12:00 </td> !-->
@@ -106,6 +117,7 @@ they improve the programmability by using pattern-based abstractions (e.g.,
 Thrust) but pay a performance penalty due to inefficient implementations of
 pattern composition.
 </br>
+</br>
 We develop an API for GPUs based programming on C++ with STL-style patterns
 and its compiler-based implementation. Our API gives the application developers
 the native C++ means (views and actions) to specify precisely which pattern
@@ -117,6 +129,7 @@ is done exclusively in the standard C++14, with STL algorithms used as patterns
 which we re-implemented in parallel for GPU. Our compiler implementation is
 based on the LLVM and Clang frameworks, and we use advanced multi-stage
 programming techniques for aggressive runtime optimizations.
+</br>
 </br>
 We experimentally evaluate our approach using a set of benchmark applications and
 a real-world case study from the area of image processing. Our codes achieve
